@@ -11,8 +11,8 @@
 
 \entrue
 
-\fr{\title{Bébé}}
-\en{\title{Baby}}
+\fr{\title{Enfant}}
+\en{\title{Child}}
 \firstname{Émilien}
 \lastname{Boulben}
 
@@ -20,11 +20,12 @@
 
 \usepackage[top=0.5cm, bottom=0.5cm, left=0.4cm, right=0.4cm, scale=0.8]{geometry}
 
-\usepackage[firstyear=1991,lastyear=1992]{moderntimeline}
+\usepackage[firstyear=1991,lastyear=1997]{moderntimeline}
 
 \tlenablemonths
 \tltextstart[base]{\scriptsize}
 \tltextend[north]{\scriptsize}
+\tlsince{\fr{Depuis}\en{Since}}
 
 % Document
 \begin{document}
@@ -37,6 +38,9 @@
     \section{\textbf{\fr{Formation}\en{Education}}}\label{sec:textbf}
 
     \setlength{\parskip}{0.7em}
+
+    \tlcventry[formationcolor]{1994}{0}{\fr{École maternelle}\en{Nursery school}}{}
+    {}{}{}
 
     \tldatecventry[formationcolor]{1991/7}{\fr{Naissance}\en{Birth}}{}{}
     {}{}{}
