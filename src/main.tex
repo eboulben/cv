@@ -11,8 +11,8 @@
 
 \entrue
 
-\fr{\title{Enfant musicien}}
-\en{\title{Musician child}}
+\fr{\title{Collégien musicien}}
+\en{\title{Musician student}}
 \firstname{Émilien}
 \lastname{Boulben}
 
@@ -20,12 +20,52 @@
 
 \usepackage[top=0.5cm, bottom=0.5cm, left=0.4cm, right=0.4cm, scale=0.8]{geometry}
 
-\usepackage[firstyear=1991,lastyear=2000]{moderntimeline}
+\usepackage{moderntimeline}
+
+\makeatletter
+\renewcommand{\tltextend}[2][north east]{%
+    \tikzset{
+        tl@endyear/.style={
+            font=#2,
+            name=tl@endyear,
+            below=\tl@width - 0.4ex,
+            inner xsep=0pt,
+            anchor=#1,
+        }
+    }
+}
+\renewcommand{\tltextstart}[2][base west]{%
+    \tikzset{
+        tl@startyear/.style={
+            font=#2,
+            name=tl@startyear,
+            above=\tl@width + 0.6ex,
+            inner xsep=0pt,
+            anchor=#1,
+        }
+    }
+}
+\renewcommand{\tltextsingle}[1]{%
+    \tikzset{
+        tl@singleyear/.style={
+            font=#1,
+            name=tl@singleyear,
+            above,
+            inner xsep=0pt,
+            anchor=south west
+        }
+    }
+}
+\makeatother
 
 \tlenablemonths
-\tltextstart[base]{\scriptsize}
-\tltextend[north]{\scriptsize}
-\tlsince{\fr{Depuis}\en{Since}}
+\tltextstart[base]{\footnotesize}
+\tltextend[north]{\footnotesize}
+\tltextsingle{\footnotesize}
+\tlsince{\fr{Depuis }\en{Since }}
+\tlwidth{0.8ex}
+\tlmaxdates{1991}{2007}
+\AtBeginDocument{\setlength{\hintscolumnwidth}{3cm}}
 
 % Document
 \begin{document}
@@ -39,10 +79,13 @@
 
     \setlength{\parskip}{0.7em}
 
-    \tlcventry[formationcolor]{1997}{0}{\fr{École primaire}\en{Primary school}}{}
+    \tlcventry[formationcolor]{2002/9}{0}{\fr{Collège}\en{Secondary school}}{}
     {}{}{}
 
-    \tlcventry[formationcolor]{1994}{1997}{\fr{École maternelle}\en{Nursery school}}{}
+    \tlcventry[formationcolor]{1997/9}{2002/6}{\fr{École primaire}\en{Primary school}}{}
+    {}{}{}
+
+    \tlcventry[formationcolor]{1994/9}{1997/6}{\fr{École maternelle}\en{Nursery school}}{}
     {}{}{}
 
     \tldatecventry[formationcolor]{1991/7}{\fr{Naissance}\en{Birth}}{}{}
@@ -52,8 +95,8 @@
 
     \section{\textbf{\fr{Centres d'intérêts}\en{Hobbies}}}\label{sec:textbf2}
     \setlength{\parskip}{0.0em}
-    \cvitem{\textbf{Sports}\fr{~}:}{\fr{vélo}\en{bike}}
+    \cvitem{\textbf{Sports}\fr{~}:}{\fr{athlétisme}\en{athletic}}
     \cvitem{\textbf{\fr{Divers}\en{Others}}\fr{~}:}{\fr{lecture}\en{reading}}
-    \cvitem{\textbf{\fr{Musique}\en{Music}}\fr{~}:}{\fr{alto, piano}\en{viola, piano}}
+    \cvitem{\textbf{\fr{Musique}\en{Music}}\fr{~}:}{\fr{alto, piano, écriture et arrangements, direction d'orchestre}\en{viola, piano, writing and arrangement, conductor}}
 
 \end{document}
