@@ -1,0 +1,44 @@
+% Preamble
+\documentclass{moderncv}
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+\newif\ifen
+\newif\iffr
+
+\newcommand{\en}[1]{\ifen#1\fi}
+\newcommand{\fr}[1]{\iffr#1\fi}
+
+\entrue
+
+\fr{\title{Bébé}}
+\en{\title{Baby}}
+\firstname{Émilien}
+\lastname{Boulben}
+
+\colorlet{formationcolor}{green!55!black}
+
+\usepackage[top=0.5cm, bottom=0.5cm, left=0.4cm, right=0.4cm, scale=0.8]{geometry}
+
+\usepackage[firstyear=1991,lastyear=1992]{moderntimeline}
+
+\tlenablemonths
+\tltextstart[base]{\scriptsize}
+\tltextend[north]{\scriptsize}
+
+% Document
+\begin{document}
+
+    \maketitle
+
+    \setlength{\parskip}{-3em}
+
+
+    \section{\textbf{\fr{Formation}\en{Education}}}\label{sec:textbf}
+
+    \setlength{\parskip}{0.7em}
+
+    \tldatecventry[formationcolor]{1991/7}{\fr{Naissance}\en{Birth}}{}{}
+    {}{}{}
+
+\end{document}
