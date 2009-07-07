@@ -11,15 +11,22 @@
 
 \entrue
 
-\fr{\title{Lycéen sportif et musicien}}
-\en{\title{Musician and athletic high school student}}
+\fr{\title{Bachelier sportif et musicien}}
+\en{\title{Musician and athletic high school graduated student}}
 \firstname{Émilien}
 \lastname{Boulben}
 
 \colorlet{formationcolor}{green!55!black}
 \colorlet{procolor}{orange!60!black}
 
-\usepackage[top=0.5cm, bottom=0.5cm, left=0.4cm, right=0.4cm, scale=0.8]{geometry}
+\usepackage{geometry}
+\geometry{
+    left=5mm,
+    right=5mm,
+    top=5mm,
+    bottom=5mm,
+    heightrounded,
+}
 
 \usepackage{moderntimeline}
 
@@ -46,14 +53,14 @@
         }
     }
 }
-\renewcommand{\tltextsingle}[1]{%
+\renewcommand{\tltextsingle}[2][base]{%
     \tikzset{
         tl@singleyear/.style={
-            font=#1,
+            font=#2,
             name=tl@singleyear,
-            above,
+            above=1ex,
             inner xsep=0pt,
-            anchor=south west
+            anchor=#1
         }
     }
 }
@@ -62,7 +69,7 @@
 \tlenablemonths
 \tltextstart[base]{\footnotesize}
 \tltextend[north]{\footnotesize}
-\tltextsingle{\footnotesize}
+\tltextsingle[base]{\footnotesize}
 \tlsince{\fr{Depuis }\en{Since }}
 \tlwidth{0.8ex}
 \tlmaxdates{1991}{2011}
@@ -88,9 +95,11 @@
 
     \section{\textbf{\fr{Formation}\en{Education}}}\label{sec:textbf2}
 
-    \setlength{\parskip}{0.7em}
+    \tldatecventry[formationcolor]{2009}
+    {\fr{Baccalauréat Scientifique option Sciences de l'Ingénieur}\en{High School Degree with Engineering major}}{}%
+    {\fr{Mention Bien}\en{With good appreciation}}{}{}{}
 
-    \tlcventry[formationcolor]{2006/9}{0}{\fr{Lycée}\en{High school}}{}
+    \tlcventry[formationcolor]{2006/9}{2009/6}{\fr{Lycée}\en{High school}}{}
     {}{}{
     \begin{itemize}
         \item \fr{Seconde~: option Mesures Physiques et Informatique.}\en{First year: Physics option}
@@ -108,7 +117,7 @@
     \tlcventry[formationcolor]{1994/9}{1997/6}{\fr{École maternelle}\en{Nursery school}}{}
     {}{}{}
 
-    \tldatecventry[formationcolor]{1991/7}{\fr{Naissance}\en{Birth}}{}{}
+    \tldatecventry[formationcolor]{1991}{\fr{Naissance}\en{Birth}}{}{}
     {}{}{}
 
 
