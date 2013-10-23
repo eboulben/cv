@@ -20,6 +20,13 @@
 
 \colorlet{formationcolor}{green!55!black}
 \colorlet{procolor}{orange!60!black}
+\colorlet{associationcolor}{violet!90!white!70!black}
+
+\usepackage{multicol}
+
+\usepackage{enumitem}
+\newlist{junior}{itemize}{1}
+\setlist[junior, 1]{label=$\diamond$, leftmargin=3em, itemsep = 0em}
 
 \usepackage{geometry}
 \geometry{
@@ -89,6 +96,19 @@
 
     \setlength{\parskip}{0.7em}
 
+    \tlcventry[associationcolor]{2013/11}{0}{\fr{Responsable Technique -- Administrateur système}\en{Technical Leader -- System Administrator}}%
+    {Junior ISEP}{}{}%
+    {
+    \begin{junior}
+        \begin{multicols}{2}
+            \item \fr{Infrastructure informatique Debian}\en{Debian infrastructure}
+            \item \fr{Formations~: Linux, git, Java, web\ldots}\en{Training: Linux, git, Java, web\ldots}
+            \item \fr{Référent technique pour les missions, ou exécution}\en{Contracts technical leader}
+            \item \fr{Résolutions de litiges clients}\en{Customer disputes resolution}
+        \end{multicols}
+    \end{junior}
+    }
+
     \tlcventry[procolor]{2013/9}{0}{\fr{Développeur C++ en R\&D}\en{C++ R\&D Software Developer}}
     {}{\fr{Apprentissage à Sodern}\en{Sodern apprenticeship}}{}
     {\fr{Création d'un logiciel d'étude de tâches de diffraction en C++ avec la bibliothèque ROOT du Cern.}
@@ -103,11 +123,11 @@
     {\fr{Représentation de signaux en direct dans une interface Java Swing, contraintes fortes de performance.}
     \en{Live signals drawing within a Java Swing interface with big performances constraints}}
 
-    \tlcventry[procolor]{2012/10}{0}{ISEPA - \fr{Président Fondateur}\en{Founder and President}}
+    \tlcventry[associationcolor]{2012/10}{0}{ISEPA - \fr{Président Fondateur}\en{Founder and President}}
     {}{Isep Students Exchange \& Partnership Association}{}
     {\fr{Création d'une association pour faciliter les échanges culturels entre tous les élèves de l'ISEP.}\en{Association to ease cultural exchanges between ISEP's students}}
 
-   \tlcventry[procolor]{2009/9}{2010/6}{\fr{Chef d’Orchestre de l’Ensemble Musical du Lycée Saint-Louis}\en{School orchestra conductor}}{}
+   \tlcventry[associationcolor]{2009/9}{2010/6}{\fr{Chef d’Orchestre de l’Ensemble Musical du Lycée Saint-Louis}\en{School orchestra conductor}}{}
     {}{}{}
 
     \tltextend[north]{\footnotesize}
