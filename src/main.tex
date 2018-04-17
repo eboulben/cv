@@ -3,6 +3,13 @@
 \moderncvstyle{classic}
 \moderncvcolor{blue}
 
+\colorlet{formationcolor}{green!55!black}
+\colorlet{procolor}{orange!60!black}
+\definecolor{color2}{rgb}{0.30,0.30,0.30}% dark grey
+\renewcommand*{\namefont}{\fontsize{30}{30}\mdseries\upshape}
+\renewcommand*{\titlefont}{\fontsize{20}{20}\mdseries\upshape}
+\renewcommand*{\namestyle}[1]{{\namefont\textcolor{color0}{#1}}}
+
 \newif\ifen
 \newif\iffr
 
@@ -11,23 +18,17 @@
 
 \entrue
 
-\fr{\title{Ingénieur en développement web agile passionné}}
-\en{\title{Enthusiast software engineer}}
+\fr{\title{Responsable de projet technique et fonctionnel}}
+\en{\title{Technical and Functional Software Leader}}
 \firstname{Émilien}
-\lastname{Boulben}
+\lastname{Boulben-Lecomte}
 \mobile{+33 6 60 93 98 10}
-\email{emilien.boulben@gmail.fr}
+\email{emilien.boulben@gmail.com}
 \address{}{92170 Vanves\en{, France}}
 
-\colorlet{formationcolor}{green!55!black}
-\colorlet{procolor}{orange!60!black}
-\colorlet{associationcolor}{violet!90!white!70!black}
-
-\usepackage{multicol}
-
 \usepackage{enumitem}
-\newlist{junior}{itemize}{1}
-\setlist[junior, 1]{label=$\diamond$, leftmargin=3em, itemsep = 0em}
+\newlist{primonial}{itemize}{1}
+\setlist[primonial, 1]{label=$\diamond$, leftmargin=3em, itemsep = -0.15em, topsep = 0.2em}
 
 \usepackage{geometry}
 \geometry{
@@ -82,7 +83,7 @@
 \tltextsingle[base]{\footnotesize}
 \tlsince{\fr{Depuis }\en{Since }}
 \tlwidth{0.8ex}
-\tlmaxdates{2009}{2019}
+\tlmaxdates{2010}{2021}
 \AtBeginDocument{\setlength{\hintscolumnwidth}{3cm}}
 
 % Document
@@ -90,14 +91,45 @@
 
     \maketitle
 
-    \setlength{\parskip}{-3em}
+    \setlength{\parskip}{-2.5em}
 
 
-    \section{\textbf{\fr{Expérience Professionnelle et associative}\en{Professional and Volunteer Experience}}}\label{sec:experience}
+    \section{\textbf{\fr{Expérience Professionnelle}\en{Professional Experience}}}\label{sec:experience}
 
-    \setlength{\parskip}{0.7em}
+    \setlength{\parskip}{0.75em}
 
-    \tlcventry[procolor]{2016/10}{0}{\fr{Développeur Web Java}\en{Java Web Software Engineer}}
+    \tlcventry[procolor]{2018/4}{0}{\fr{Responsable de projet technique et fonctionnel}\en{Technical and Functional Software Leader}}
+    {Valtech}{Client - Primonial}{}
+    {
+    \fr{Responsable de plusieurs projets sur trois plateformes, équipe de 8 à 13 personnes :
+    \begin{primonial}
+        \item communication avec le client, rapports et remontées d'alertes si nécessaires
+        \item gestion de conflits, bien-être et progression des membres de l'équipe
+        \item pilotage des projets, suivi opérationnel au quotidien
+        \item ordonnancement des projets / user stories / tâches
+        \item cohérence de la vision transverse entre projets, applications et versions
+        \item complétude des spécifications fonctionnelles, spécifications techniques pour les sujets Back-end
+        \item gestion des différentes versions cohabitant ensemble, coordination des environnements, livraisons
+        \item qualité du développement, suivi du workflow git, partage des connaissances au sein de l'équipe
+        \item développement de fonctionnalités urgentes ou critiques
+    \end{primonial}}
+    \en{Responsible for various projects on three platforms, team of 8 to 13 people:
+    \begin{primonial}
+        \item client relationship, reporting and feedback alerts when needed
+        \item conflict management, well-being and team members growth
+        \item project management, daily operational follow-up
+        \item projects, user stories and tasks scheduling
+        \item transversal vision consistency between projects, applications and versions
+        \item functional specifications validation, back-end projects technical specifications
+        \item version and release management
+        \item development and git workflow standards, knowledge sharing within the team
+        \item urgent or critical functionalities development
+    \end{primonial}
+    }}
+
+    \tltextstart[base east]{\footnotesize}
+    \tltextend[north west]{\footnotesize}
+    \tlcventry[procolor]{2016/10}{2018/3}{\fr{Développeur Web Java}\en{Java Web Software Engineer}}
     {Valtech}{Client - Primonial}{}
     {\fr{Développement de projets pour une plateforme de souscription électronique avec une architecture micro-services.
     Accompagnement du métier dans l'expression du besoin et les spécifications. Équipe de 5 à 8 personnes.}
@@ -117,18 +149,12 @@
     \en{Full stack development of many Web apps (vanilla front, Spring back), using SCRUM method.\newline
     Improvement of software factory with bash. Team of 2 to 6 people.}}
 
-    \tlcventry[associationcolor]{2013/11}{2014/7}{\fr{Responsable Technique -- Administrateur système}\en{Technical Leader -- System Administrator}}%
+    \tlcventry[procolor]{2013/11}{2014/7}{\fr{Responsable Technique -- Administrateur système}\en{Technical Leader -- System Administrator}}%
     {Junior ISEP}{}{}%
-    {
-    \begin{junior}
-        \begin{multicols}{2}
-            \item \fr{Infrastructure informatique Debian}\en{Debian infrastructure}
-            \item \fr{Formations~: Linux, git, Java, web\ldots}\en{Training: Linux, git, Java, web\ldots}
-            \item \fr{Référent technique pour les missions, ou exécution}\en{Contracts technical leader}
-            \item \fr{Résolutions de litiges clients}\en{Customer disputes resolution}
-        \end{multicols}
-    \end{junior}
-    }
+    {\fr{Référent technique pour les missions, exécution de missions, formateur, gestion de l'infrastructure.\newline
+    Participation aux réponses aux appels d'offre, résolutions de litiges clients.}
+    \en{Technical support to developers, trainer, infrastructure and virtualization host management.\newline
+    Participation in tenders, resolution of customer disputes.}}
 
     \tlcventry[procolor]{2013/9}{2014/7}{\fr{Développeur C++ en R\&D}\en{C++ R\&D Software Developer}}
     {}{\fr{Apprentissage à Sodern}\en{Sodern apprenticeship}}{}
@@ -138,52 +164,47 @@
     \tlcventry[procolor]{2013/9}{2016/6}{\fr{Khôlleur de Mathématiques}\en{Mathematics Test Preparation Instructor}}
     {ISEP}{MPSI}{}{}
 
+    \tltextstart[base]{\footnotesize}
+    \tltextend[north]{\footnotesize}
     \tllabelcventry[procolor]{2013/7}{2013/8}{\fr{Été///2013}\en{2013///Summer}}
     {\fr{Dévelopeur Java Core}\en{Java Core Developer}}
     {\fr{Stage à Airbus}\en{Airbus internship}}{Ottobrun (\fr{Allemagne}\en{Germany})}{}
     {\fr{Représentation de signaux en direct dans une interface Java Swing, contraintes fortes de performance.}
     \en{Live signals drawing within a Java Swing interface with big performances constraints}}
 
-    \tlcventry[associationcolor]{2012/10}{2014/1}{ISEPA - \fr{Président Fondateur}\en{Founder and President}}
-    {}{Isep Students Exchange \& Partnership Association}{}
-    {\fr{Création d'une association pour faciliter les échanges culturels entre tous les élèves de l'ISEP.}\en{Association to ease cultural exchanges between ISEP's students}}
-
-   \tlcventry[associationcolor]{2009/9}{2010/6}{\fr{Chef d’Orchestre de l’Ensemble Musical du Lycée Saint-Louis}\en{School orchestra conductor}}{}
-    {}{}{}
-
     \tltextend[north]{\footnotesize}
 
 
     \section{\textbf{\fr{Compétences}\en{Skills}}}\label{sec:competences}
 
-    \setlength{\parskip}{0.0em}
-    \cvdoubleitem{\textbf{Back-end}\fr{~}:}{Java, Spring, Jpa, Sql, \LaTeX}{\textbf{Front-end}\fr{~}:}{\fr{bases de html5, css3, Js et angular}\en{html5, css3, JS and angular basics}}
-    \cvdoubleitem{\textbf{Devops}\fr{~}:}{git, Linux, bash, Jenkins, maven}{\textbf{Projet}\fr{~}:}{Scrum, Kanban}
+    \setlength{\parskip}{0.2em}
+    \cvdoubleitem{\textbf{Back-end}\fr{~}:}{Java, Spring, Hibernate, Jpa, Sql}
+        {\textbf{\fr{Projet}\en{Project}}\fr{~}:}{Scrum, Kanban, \fr{pilotage, suivi}\en{project management}}
+    \cvdoubleitem{\textbf{Devops}\fr{~}:}{git, Linux, réseau, bash, Jenkins, maven}
+        {\textbf{\fr{Humaines}\en{Soft}}\fr{~}:}{\fr{CNV, écoute active, gestion de conflits}\en{NVC, conflict management}}
+    \cvdoubleitem{\textbf{Front-end}\fr{~}:}{\fr{bases de JS, Node.js et Angular}\en{JS, Node.js and Angular basics}}
+        {\textbf{\fr{Conformité}\en{Legal}}\fr{~}:}{\fr{RGPD, MIFID2, DDA, PRIIPs}\en{GDPR, MIFID2, IDD, PRIIPS}}
+    \cvdoubleitem{\textbf{\fr{Diverses}\en{Others}}\fr{~}:}{\LaTeX, OAuth 2.0, Keycloak}
+        {\textbf{\fr{Anglais}\en{English}}\fr{~}:}{\fr{courant}\en{fluent}, TOEIC 900 (2013)}
 
-    \cvitem{\textbf{\fr{Anglais}\en{English}}\fr{~}:}{\fr{courant}\en{fluent}, TOEIC 900 (2013)}
 
-
-    \setlength{\parskip}{0.3em}
+    \setlength{\parskip}{0.4em}
 
 
     \section{\textbf{Formation}}\label{sec:formation}
 
+    \tltextstart[base west]{\footnotesize}
+    \tltextend[north west]{\footnotesize}
     \tlcventry[formationcolor]{2012/9}{2015/9}{\fr{Diplôme d’Ingénieur Génie Logiciel en apprentissage}\en{Master of Science in Software Engineering}}{ISEP}
     {}{}{}
 
-    \tlcventry[formationcolor]{2009/9}{2010/6}{\fr{Classe préparatoire}\en{Preparatory school}}{\fr{Lycée Saint-Louis}\en{Saint-Louis School}}
-    {\fr{MPSI}\en{Mathematic major}}{}{}
-
-    \tldatecventry[formationcolor]{2009}
-    {\fr{Baccalauréat Scientifique option Sciences de l'Ingénieur}\en{High School Degree with Engineering major}}{}%
-    {\fr{Mention Bien}\en{With good appreciation}}{}{}{}
 
 
     \section{\textbf{\fr{Centres d'intérêts}\en{Hobbies}}}\label{sec:interest}
 
     \setlength{\parskip}{0.0em}
-    \cvitem{\textbf{Sports}\fr{~}:}{\fr{Escalade, alpinisme, ski}\en{Climbing, mountaineering, skiing}}
-    \cvitem{\textbf{\fr{Divers}\en{Others}}\fr{~}:}{\fr{lecture, \oe nologie}\en{reading, \oe nology}}
-    \cvitem{\textbf{\fr{Musique}\en{Music}}\fr{~}:}{\fr{alto, piano, écriture et arrangements, direction d'orchestre}\en{viola, piano, writing and arrangement, conductor}}
+    \cvdoubleitem{\textbf{Sports}\fr{~}:}{\fr{escalade, alpinisme, ski, plongée}\en{climbing, mountaineering, skiing, diving}}
+        {\textbf{\fr{Musique}\en{Music}}\fr{~}:}{\fr{alto, piano, écriture et arrangements}\en{viola, piano, writing and arrangement}}
+    \cvitem{\textbf{\fr{Divers}\en{Others}}\fr{~}:}{\fr{lecture, \oe nologie, sciences humaines, jeux de société}\en{reading, \oe nology, social science, board games}}
 
 \end{document}
